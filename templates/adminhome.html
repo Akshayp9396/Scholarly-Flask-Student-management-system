@@ -1,0 +1,32 @@
+
+{% extends 'index.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+    {% block content1 %}
+    <a href="/viewstd" style="margin-right: 10px;">View student</a>
+    <a href="/viewtchr"style="margin-right: 10px;">View Teacher</a>
+    <a href="/approvestudent"style="margin-right: 10px;">Approve student</a> 
+    <a href="/approveteacher"style="margin-right: 10px;">Approve Teacher</a>
+    <a href="/deletestd"style="margin-right: 10px;">Delete student</a>
+    <a href="/deletetchr"style="margin-right: 10px;">Delete Teacher</a>
+    {% endblock content1 %}
+
+    {% block content2 %}
+    <h2>Welcome <span style="color: #f2063a;font-weight: 700;">Admin,</span></h2>
+    <div class="s-hero__content-about">
+
+        <p>
+            Manage systems,  <br> empower teams,    <br> streamline success, <br>lead efficiently.
+        </p>
+    {% endblock content2 %}
+    
+</body>
+</html>

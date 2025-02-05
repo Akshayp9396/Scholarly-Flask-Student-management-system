@@ -1,0 +1,28 @@
+
+{% extends 'index.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block content1 %}
+    <a href="/tchrlist" style="margin-right: 10px;"> Teachers List</a>
+    <a href="/editstd" style="margin-right: 10px;">Edit Profile</a>
+    <a href="/stdlogout">Logout</a>
+    {% endblock content1 %}
+    
+
+    {% block content2 %}
+    <h2>Welcome <span style="color: #f2063a;font-weight: 700;">Student,</span></h2>
+    <div class="s-hero__content-about">
+
+        <p>
+            Embark on a journey  <br> of growth and   <br> learning with us..
+        </p>
+    {% endblock content2 %}
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --accent-color: #f2063a;
+            --background-color: #ffffff;
+            --gray-light: #f9c8c9;
+            --gray: #8f8f8f;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Roboto', Helvetica, Arial, sans-serif;
+            background-color: #000000;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+            background: #14171B;
+        }
+
+        .login-form {
+            width: 500px;
+            max-width: 900px;
+            padding: 2em;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .name-container {
+            display: flex;
+            gap: 10px;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .lf--input {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid var(--gray-light);
+            border-radius: 5px;
+        }
+
+        .name-container .lf--input {
+            width: 45%;
+            margin-bottom: 10px;
+        }
+
+        select {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid var(--gray-light);
+            border-radius: 5px;
+        }
+
+        .lf--submit {
+            padding: 8px;
+            width: 95px;
+            height: 45px;
+            background: #ffffff;
+            border: 2px solid var(--accent-color);
+            color: black;
+            cursor: pointer;
+            font-size: 15px;
+            border-radius: 30px;
+            margin-top: 1em;
+            transition: all 0.15s ease;
+        }
+
+        .lf--submit:focus,
+        .lf--submit:hover {
+            outline: none;
+            background-color: var(--accent-color);
+            color: #ffffff;
+            transform: scale(1.05);
+            transition: all 0.15s ease;
+        }
+    </style>
+</head>
+<body>
+    <form class="login-form" action="/savestd" method="POST">
+        <h1 style="font-weight: 700;font-size: 20px; margin-bottom: 30px;"> Student Resigter</h1>
+        <div class="name-container">
+            <input class="lf--input" type="text" name="firstname" placeholder="Firstname">
+            <input class="lf--input" type="text" name="lastname" placeholder="Lastname">
+        </div>
+
+        <input class="lf--input" type="email" name="email" placeholder="Email" style="width: 480px;">
+
+        <select name="cou" style="width: 480px;">
+            <option value="" disabled selected>Choose an option</option>
+            <option value="student">Student</option>
+            <option value="teacher">Teacher</option>
+        </select>
+
+        <input class="lf--input" type="text" name="username" placeholder="Username">
+        <input class="lf--input" type="password" name="password" placeholder="Password">
+        <input class="lf--input" type="text" name="address" placeholder="Address">
+        <input class="lf--input" type="number" name="phone_number" placeholder="Phone Number">
+        <input class="lf--input" type="text" name="guardian" placeholder="Guardian">
+
+        <input class="lf--submit" type="submit" value="Register">
+    </form>
+</body>
+</html>

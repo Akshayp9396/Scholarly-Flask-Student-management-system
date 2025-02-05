@@ -1,0 +1,30 @@
+{% extends 'index.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+    {% block content1 %}
+    <a href="/stdlist" style="margin-right: 10px;"> Students List</a>
+    <a href="/edittchr" style="margin-right: 10px;">Edit Profile</a>
+    <a href="/tchrlogout">Logout</a>
+   
+    {% endblock content1 %}
+
+    {% block content2 %}
+    <h2>Welcome <span style="color: #f2063a;font-weight: 700;">Teacher,</span></h2>
+    <div class="s-hero__content-about">
+
+        <p>
+            Inspire minds, <br> nurture potential,   <br> shape tomorrow's future leaders.
+        </p>
+    {% endblock content2 %}
+    
+    
+</body>
+</html>
